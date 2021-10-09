@@ -1,0 +1,115 @@
+<!-- BEGIN DASHBOARD STATS -->
+<div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat red-intense">
+            <div class="visual">
+                <i class="icon-speech"></i>
+            </div>
+            <div class="details">
+                <div class="number">
+                    {numContents}
+                </div>
+                <a href="../contents/">
+                    <div class="desc">
+                        เนื้อหาการตลาด
+                    </div>
+                </a>
+            </div>
+            <a class="more" href="../contents/">
+						แสดงเนื้อหาทั้งหมด<i class="m-icon-swapright m-icon-white"></i>
+						</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat green-haze">
+            <div class="visual">
+                <i class="icon-book-open"></i>
+            </div>
+            <div class="details">
+                <div class="number">
+                    {numContentsView}
+                </div>
+                <div class="desc">
+                    ยอดการเข้าชมเนื้อหา
+                </div>
+            </div>
+            <a class="more" href="../contents/">
+						ยอดเข้าชมรายเนื้อหา<i class="m-icon-swapright m-icon-white"></i>
+						</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat purple-plum">
+            <div class="visual">
+                <i class="fa fa-photo"></i>
+            </div>
+            <div class="details">
+                <div class="number">
+                    {<i class="fas fa-share    "></i>}
+                </div>
+                <div class="desc">
+                    แชร์เนื้อหา
+                </div>
+            </div>
+            <a class="more" href="#">
+						จำนวนแชร์เนื้อหา <i class="m-icon-swapright m-icon-white"></i>
+						</a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="dashboard-stat blue-madison">
+            <div class="visual">
+                <i class="icon-book-open"></i>
+            </div>
+            <div class="details">
+                <div class="number">
+                    {numRegister}
+                </div>
+                <div class="desc">
+                    ลงทะเบียน
+                </div>
+            </div>
+            <a class="more" href="../customers/">
+						แสดงผู้สนใจทั้งหมด<i class="m-icon-swapright m-icon-white"></i>
+						</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="portlet-body">
+    <div class="table-scrollable">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>วันที่/ลงทะเบียน</th>
+                    <th>เรื่อง</th>
+                    <th>ชื่อ-สกุล</th>
+                    <th>เบอร์โทร</th>
+                    <th> Line ID</th>
+                    <th>E-mail</th>
+                    <th width="5%">สถานะ</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <!-- START BLOCK : DATA -->
+                <tr>
+                    <td>{tdate}</td>
+                    <td>{post_title}</td>
+                    <td>{FullName}</td>
+                    <td>{Phone}</td>
+                    <td>{LineName}</td>
+                    <td>{Email}</td>
+                    <td>{status} </td>
+
+                </tr>
+                <!-- END BLOCK : DATA -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- END DASHBOARD STATS -->
