@@ -25,7 +25,7 @@
 
                             <!-- START BLOCK : LISTSEND -->
                             <tr>
-                                <td>{no}</td>
+                                <td><a href="?action=delete&id={id}" onclick="return confirm('Do you want to delete ?')">{no}</a></td>
                                 <td>{title} {fileicon} {tdate}
                                 </td>
                             </tr>
@@ -45,7 +45,7 @@
                             <div class="form-group mb-3 row">
                                 <label class="form-label col-3 col-form-label">หัวเรื่อง</label>
                                 <div class="col">
-                                    <input type="text" class="form-control" aria-describedby="title_text" placeholder="หัวเรื่อง">
+                                    <input type="text" name="title" class="form-control" aria-describedby="title_text" placeholder="หัวเรื่อง">
                                     <small class="form-hint">หัวเรื่องเอกสารที่ส่ง</small>
                                 </div>
                             </div>

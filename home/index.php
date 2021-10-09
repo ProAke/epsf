@@ -30,12 +30,29 @@ $tpl->assign("_ROOT.user_id", $user_id);
 
 
 
+
+if ($_GET['action'] == "delete") {
+
+
+	$sql = "DELETE FROM `$tableSendFiles` WHERE `ID` = '" . $_GET['id'] . "'";
+	$result = $conn->query($sql) or die($conn->error);
+	header("Location: {$_SERVER['HTTP_REFERER']}");
+	exit;
+}
+
+
+
+
+
+
+
+
 $sql = "SELECT * FROM `" . $tableSendFiles . "` WHERE `USER`='" . $_SESSION['USERNAME'] . "'";
 $query = $conn->query($sql) or die($conn->error);
 $total = $query->num_rows;
 $total = number_format($total);
 $i = 0;
-if ($ln = $query->fetch_assoc()) {
+while ($ln = $query->fetch_assoc()) {
 	$i++;
 	$tpl->newBlock("LISTSEND");
 	$tpl->assign("no", $i);
