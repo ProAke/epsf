@@ -84,9 +84,16 @@ if ($_POST['action'] == "save") {
 
 
 
-    $sql = "INSERT INTO " . $tableSendFiles . " (USER, TITLE, GROUP, FILE1,FILE1_TYPE, FILE2, FILE2_TYPE, FILE3, FILE3_TYPE, DATE, STATUS)
-    VALUES ('" . $_SESSION['USERNAME'] . "', '" . $_POST['title'] . "','" . $_POST['group'] . "', '" . $new_file1 . "', '" . $file1_type . "', '" . $new_file2 . "', '" . $file2_type . "', '" . $new_file3 . "', '" . $file3_type . "',
-    '" . date("Y-m-d H:i:s") . "', 'show')";
+    $sql = "INSERT INTO " . $tableSendFiles . " (USER, TITLE, FILE1, FILE1_TYPE, FILE2, FILE2_TYPE, FILE3, FILE3_TYPE, DATE, STATUS, GR)
+    VALUES ('" . $_SESSION['USERNAME'] . "',
+     '" . $_POST['title'] . "',
+      '" . $new_file1 . "',
+       '" . $file1_type . "',
+        '" . $new_file2 . "',
+         '" . $file2_type . "',
+          '" . $new_file3 . "',
+           '" . $file3_type . "',
+    '" . date("Y-m-d H:i:s") . "', 'show', '1')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php?action=1");

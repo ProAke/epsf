@@ -57,22 +57,22 @@ while ($ln = $query->fetch_assoc()) {
 	$tpl->newBlock("LISTSEND");
 	$tpl->assign("no", $i);
 	$tpl->assign("id", $ln['ID']);
-	$tpl->assign("title", $ln['TITLE']);
+	$tpl->assign("title", $ln['TITLE'] . " | ");
 	$tpl->assign("tdate", " | " . $ln['DATE']);
 	if ($ln['FILE1']) {
-		$f1 = '<img src="../static/' . $ln['FILE1_TYPE'] . '.png" height="50">';
+		$f1 = '<img src="../static/' . $ln['FILE1_TYPE'] . '.png" height="20">';
 	}
 	if ($ln['FILE2']) {
-		$f2 = '<img src="../static/' . $ln['FILE2_TYPE'] . '.png" height="50">';
+		$f2 = '<img src="../static/' . $ln['FILE2_TYPE'] . '.png" height="20">';
 	}
 	if ($ln['FILE3']) {
-		$f3 = '<img src="../static/' . $ln['FILE3_TYPE'] . '.png" height="50">';
+		$f3 = '<img src="../static/' . $ln['FILE3_TYPE'] . '.png" height="20">';
 	}
 	if ($ln['FILE4']) {
-		$f4 = '<img src="../static/' . $ln['FILE4_TYPE'] . '.png" height="50">';
+		$f4 = '<img src="../static/' . $ln['FILE4_TYPE'] . '.png" height="20">';
 	}
 	if ($ln['FILE5']) {
-		$f5 = '<img src="../static/' . $ln['FILE5_TYPE'] . '.png" height="50">';
+		$f5 = '<img src="../static/' . $ln['FILE5_TYPE'] . '.png" height="20">';
 	}
 
 	$tpl->assign("fileicon", $f1 . $f2 . $f3 . $f4 . $f5);
