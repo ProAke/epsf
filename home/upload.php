@@ -85,7 +85,7 @@ if ($_POST['action'] == "save") {
 
 
     $sql = "INSERT INTO " . $tableSendFiles . " (USER, TITLE, GROUP, FILE1,FILE1_TYPE, FILE2, FILE2_TYPE, FILE3, FILE3_TYPE, DATE, STATUS)
-    VALUES ('" . $_SESSION['USERNAME'] . "', '" . $_POST['title'] . "','" . $_POST['g'] . "', '" . $new_file1 . "', '" . $file1_type . "', '" . $new_file2 . "', '" . $file2_type . "', '" . $new_file3 . "', '" . $file3_type . "',
+    VALUES ('" . $_SESSION['USERNAME'] . "', '" . $_POST['title'] . "','" . $_POST['group'] . "', '" . $new_file1 . "', '" . $file1_type . "', '" . $new_file2 . "', '" . $file2_type . "', '" . $new_file3 . "', '" . $file3_type . "',
     '" . date("Y-m-d H:i:s") . "', 'show')";
 
     if ($conn->query($sql) === TRUE) {
